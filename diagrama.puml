@@ -1,0 +1,36 @@
+@startuml
+class Slayer
+class Armas
+class Enemigo
+class Consumible
+class Personaje
+class Escopeta
+class Pistola
+class Bfg
+class PlasmaRifle
+class Motosierra
+class Minigun
+class Imp
+class HellBaron
+class HellKnight
+class Aracnotron
+class SpiderMasterMind
+class IconofSin
+class CyberDemon
+class Boss
+class Vida
+class Botiquin
+class Municion
+class Escudo
+class Vida
+class Puño
+class Pinky
+class Revenant
+class Llave
+class LostSoul
+class Archville
+Slayer --> Personaje
+Slayer *-- Vida
+Slayer o-- Arma
+Imp --> Personaje
+@enduml
