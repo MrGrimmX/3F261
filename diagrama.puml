@@ -1,6 +1,6 @@
 @startuml
 class Slayer
-class Armas
+class Arma
 class Enemigo
 class Consumible
 class Personaje
@@ -11,12 +11,12 @@ class PlasmaRifle
 class Motosierra
 class Minigun
 class Imp
-class HellBaron
-class HellKnight
+class Hellbaron
+class Hellknight
 class Aracnotron
-class SpiderMasterMind
-class IconofSin
-class CyberDemon
+class Spidermastermind
+class Iconofsin
+class Cyberdemon
 class Boss
 class Vida
 class Botiquin
@@ -27,10 +27,35 @@ class Puño
 class Pinky
 class Revenant
 class Llave
-class LostSoul
+class Lostsoul
 class Archville
 Slayer --> Personaje
 Slayer *-- Vida
 Slayer o-- Arma
-Imp --> Personaje
+Enemigo --> Personaje
+Enemigo *-- Vida
+Boss --> Enemigo
+Imp --> Enemigo
+Revenant --> Enemigo
+Pinky --> Enemigo
+Hellknight --> Enemigo
+Hellbaron --> Enemigo
+Archville --> Enemigo
+Lostsoul --> Enemigo
+Aracnotron --> Enemigo
+Cyberdemon --> Boss
+Spidermastermind --> Boss
+Iconofsin --> Boss
+Puño --> Arma
+Pistola --> Arma
+Escopeta --> Arma
+Bfg --> Arma
+PlasmaRifle --> Arma
+Motosierra --> Arma
+Minigun --> Arma
+Slayer o-- Consumible
+Botiquin --> Consumible
+Municion --> Consumible
+Llave --> Consumible
+Escudo --> Consumible
 @enduml
