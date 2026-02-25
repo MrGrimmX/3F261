@@ -1,4 +1,5 @@
 @startuml
+class Puntaje
 class Slayer
 class Arma
 class Enemigo
@@ -31,7 +32,7 @@ class Lostsoul
 class Archville
 Slayer --> Personaje
 Slayer *-- Vida
-Slayer o-- Arma
+Slayer "1" o-- "*" Arma
 Enemigo --> Personaje
 Enemigo *-- Vida
 Boss --> Enemigo
@@ -58,4 +59,12 @@ Botiquin --> Consumible
 Municion --> Consumible
 Llave --> Consumible
 Escudo --> Consumible
+Enemigo --> Puntaje
+Consumible --> Puntaje
+Arma --> Puntaje
+Slayer "1" o-- "*" Arma
+Slayer "1" o-- "*" Consumible
+Arma "1" o-- "*" Puntaje
+Consumible "1" o-- "*" Puntaje
+Enemigo "1" o-- "*" Puntaje
 @enduml
