@@ -30,41 +30,50 @@ class Revenant
 class Llave
 class Lostsoul
 class Archville
-Slayer --> Personaje
+Slayer --|> Personaje
 Slayer *-- Vida
 Slayer "1" o-- "*" Arma
-Enemigo --> Personaje
+Enemigo --|> Personaje
 Enemigo *-- Vida
-Boss --> Enemigo
-Imp --> Enemigo
-Revenant --> Enemigo
-Pinky --> Enemigo
-Hellknight --> Enemigo
-Hellbaron --> Enemigo
-Archville --> Enemigo
-Lostsoul --> Enemigo
-Aracnotron --> Enemigo
-Cyberdemon --> Boss
-Spidermastermind --> Boss
-Iconofsin --> Boss
-Puño --> Arma
-Pistola --> Arma
-Escopeta --> Arma
-Bfg --> Arma
-PlasmaRifle --> Arma
-Motosierra --> Arma
-Minigun --> Arma
+Boss --|> Enemigo
+Imp --|> Enemigo
+Revenant --|> Enemigo
+Pinky --|> Enemigo
+Hellknight --|> Enemigo
+Hellbaron --|> Enemigo
+Archville --|> Enemigo
+Lostsoul --|> Enemigo
+Aracnotron --|> Enemigo
+Cyberdemon --|> Boss
+Spidermastermind --|> Boss
+Iconofsin --|> Boss
+Puño --|> Arma
+Pistola --|> Arma
+Escopeta --|> Arma
+Bfg --|> Arma
+PlasmaRifle --|> Arma
+Motosierra --|> Arma
+Minigun --|> Arma
 Slayer o-- Consumible
-Botiquin --> Consumible
-Municion --> Consumible
-Llave --> Consumible
-Escudo --> Consumible
-Enemigo --> Puntaje
-Consumible --> Puntaje
-Arma --> Puntaje
+Botiquin --|> Consumible
+Municion --|> Consumible
+Llave --|> Consumible
+Escudo --|> Consumible
+Enemigo --|> Puntaje
+Consumible --|> Puntaje
+Arma --|> Puntaje
 Slayer "1" o-- "*" Arma
 Slayer "1" o-- "*" Consumible
 Arma "1" o-- "*" Puntaje
 Consumible "1" o-- "*" Puntaje
 Enemigo "1" o-- "*" Puntaje
+Slayer o-- Enemigo
+Slayer o-- Boss
+class Enemigo{
+- Vida
++ Morir
+}
+class Arma{
+- Disparo
+}
 @enduml
