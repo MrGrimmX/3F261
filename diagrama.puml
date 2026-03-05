@@ -76,4 +76,7 @@ class Enemigo{
 class Arma{
 - Disparo
 }
+class Consumible{
+- Uso
+}
 @enduml
